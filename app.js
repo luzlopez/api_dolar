@@ -17,11 +17,19 @@ $(document).ready(function(){
 			 $('#Euro').text(data.euro.valor);
 			 $('#UF').text(data.uf.valor);
 			 $('#UTM').text(data.utm.valor);
-			
-
-		});
-})
 
 
-//onclick boton enviar
-// $val del placeholder 1 clp x ejemplo, se declara como variable para poder aplicar las operaciones matematicas
+	});
+
+	$( "input_div" ).click(function() {
+		  var divisa = $( this ).input_div();
+		  $( "BTN" ).val('')
+	});
+
+
+});
+
+
+
+
+ $('.indicador.uf').html(formatNumber(rates.uf.valor));
